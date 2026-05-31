@@ -2,9 +2,25 @@
 
 ## Overview
 
-AI Energy Optimization System V2 is a full-stack machine learning application designed to predict household energy consumption, estimate monthly electricity costs, and provide intelligent energy-saving recommendations through an interactive dashboard.
+AI Energy Optimization System V2 is a full-stack machine learning application developed to predict household energy consumption, estimate electricity costs, and provide intelligent energy-saving recommendations through an interactive dashboard.
 
-The project integrates a React frontend, FastAPI backend, and a trained Random Forest machine learning model to demonstrate real-world energy analytics and optimization.
+The system combines a React frontend, FastAPI backend, and a trained Random Forest machine learning model to demonstrate real-world energy analytics and optimization. The project showcases the integration of machine learning with modern web technologies to deliver actionable insights for energy management.
+
+---
+
+## Dashboard Preview
+
+### Main Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### Prediction Results
+
+![Prediction Results](screenshots/prediction.png)
+
+### AI Recommendation Panel
+
+![Recommendation](screenshots/recommendation.png)
 
 ---
 
@@ -14,46 +30,30 @@ The project integrates a React frontend, FastAPI backend, and a trained Random F
 
 * Predict household energy consumption using a trained Random Forest model.
 * Generate estimated daily and monthly energy usage.
+* Deliver real-time prediction results through a FastAPI REST API.
 
 ### Electricity Cost Estimation
 
-* Calculate projected monthly electricity costs based on predicted consumption.
+* Estimate monthly electricity bills based on predicted energy consumption.
+* Convert technical predictions into practical financial insights.
 
 ### AI Recommendation Engine
 
-* Provide intelligent recommendations for reducing energy usage and improving efficiency.
+* Generate intelligent energy-saving recommendations.
+* Classify energy usage as Efficient, Moderate, or High Usage.
 
 ### Interactive Dashboard
 
 * Modern React-based user interface.
-* Real-time prediction results.
-* Energy trend visualization.
+* Real-time energy prediction results.
+* Interactive energy trend visualization.
 * Responsive design for different screen sizes.
 
-### Prediction History
+### Energy Analytics
 
-* Store and display prediction records during application runtime.
-* Compare previous predictions and energy trends.
-
-### Downloadable Reports
-
-* Export prediction results and recommendations into a downloadable report.
-
----
-
-## Dashboard Preview
-
-### Main Dashboard
-
-![Dashboard](docs/screenshots/dashboard-home.png)
-
-### Prediction Results
-
-![Prediction Results](docs/screenshots/prediction-result.png)
-
-### AI Recommendation Panel
-
-![Recommendation](docs/screenshots/recommendation-panel.png)
+* Display predicted power consumption.
+* Visualize monthly energy usage.
+* Present cost estimation and optimization recommendations.
 
 ---
 
@@ -66,12 +66,14 @@ The project integrates a React frontend, FastAPI backend, and a trained Random F
 * Axios
 * Recharts
 * Lucide React
+* CSS
 
 ### Backend
 
-* FastAPI
 * Python
+* FastAPI
 * Uvicorn
+* Joblib
 
 ### Machine Learning
 
@@ -79,38 +81,30 @@ The project integrates a React frontend, FastAPI backend, and a trained Random F
 * Random Forest Regressor
 * Pandas
 * NumPy
-* Joblib
 
-### Version Control
+### Development Tools
 
 * Git
 * GitHub
+* VS Code
 
 ---
 
 ## System Architecture
 
+```text
 User Input
-
-↓
-
+    ↓
 React Frontend
-
-↓
-
+    ↓
 FastAPI Backend
-
-↓
-
-Random Forest Machine Learning Model
-
-↓
-
+    ↓
+Random Forest ML Model
+    ↓
 Prediction Results
-
-↓
-
-Interactive Dashboard Visualization
+    ↓
+Interactive Dashboard
+```
 
 ---
 
@@ -121,25 +115,39 @@ AI-Energy-Optimization-System-V2
 │
 ├── backend
 │   ├── main.py
-│   ├── requirements.txt
+│   ├── .gitignore
 │   └── models
 │       └── energy_model.pkl
 │
 ├── frontend
 │   ├── src
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── public
 │   ├── package.json
 │   └── vite.config.js
 │
-├── docs
-│   └── screenshots
+├── screenshots
+│   ├── dashboard.png
+│   ├── prediction.png
+│   └── recommendation.png
 │
-├── README.md
-└── .gitignore
+└── README.md
 ```
 
-## Example Prediction Output
+---
 
-### Input
+## API Example
+
+### Endpoint
+
+```http
+POST /predict
+```
+
+### Sample Input
 
 ```json
 {
@@ -150,7 +158,7 @@ AI-Energy-Optimization-System-V2
 }
 ```
 
-### Output
+### Sample Output
 
 ```json
 {
@@ -159,39 +167,79 @@ AI-Energy-Optimization-System-V2
   "monthly_kwh": 687,
   "monthly_bill": 123.67,
   "status": "Moderate",
-  "recommendation": "Monitor peak-hour usage and reduce standby power consumption."
+  "recommendation": "Energy usage is moderate. Monitor peak-hour consumption and standby devices."
 }
 ```
 
 ---
 
-## Skills Demonstrated
+## How to Run Locally
 
-* Machine Learning Model Deployment
-* Full-Stack Development
-* REST API Development
-* Frontend–Backend Integration
-* Data Visualization
-* Energy Analytics
-* Python Programming
-* React Development
-* Software Engineering Practices
-* Git and GitHub Workflow
+### Start Backend
+
+```bash
+cd backend
+uvicorn main:app --reload
+```
+
+Backend URL:
+
+```text
+http://127.0.0.1:8000
+```
+
+API Documentation:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+### Start Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend URL:
+
+```text
+http://localhost:5173
+```
+
+or
+
+```text
+http://localhost:5174
+```
 
 ---
 
-## Future Enhancements
+## Key Achievements
 
-### Version 3 Roadmap
+* Built a complete full-stack machine learning application.
+* Developed a FastAPI REST API for ML inference.
+* Integrated React frontend with Python backend.
+* Implemented Random Forest-based energy prediction.
+* Added electricity cost estimation and recommendation generation.
+* Created an interactive analytics dashboard for energy monitoring.
+* Applied Git and GitHub best practices for project management.
 
-* Smart Meter Dataset Integration
-* Real-Time Energy Monitoring
-* Advanced Forecasting Models
-* Energy Risk Assessment
-* Savings Optimization Engine
-* User Authentication
-* Database Integration
-* Cloud Deployment
+---
+
+## Skills Demonstrated
+
+* Machine Learning Deployment
+* Full-Stack Development
+* REST API Development
+* Data Visualization
+* React Development
+* FastAPI Development
+* Energy Analytics
+* Python Programming
+* Git & GitHub Workflow
+* Software Engineering
 
 ---
 
@@ -200,8 +248,9 @@ AI-Energy-Optimization-System-V2
 **Toufique Hasan**
 
 M.S. Applied Computer Science
-
 Southeast Missouri State University
+
+GitHub: https://github.com/thasan907
 
 ---
 
