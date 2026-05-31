@@ -1,16 +1,122 @@
-# React + Vite
+# AI Energy Optimization System V2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+AI Energy Optimization System V2 is a full-stack machine learning application designed to predict household energy consumption, estimate monthly electricity costs, and provide intelligent recommendations for energy optimization.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The system combines a FastAPI backend, a React frontend, and a Random Forest machine learning model to deliver real-time energy forecasting through an interactive dashboard.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+### Energy Consumption Prediction
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Predict household energy usage using machine learning.
+* Generate estimated daily and monthly energy consumption.
+
+### Monthly Cost Estimation
+
+* Calculate projected electricity bills based on predicted usage.
+
+### AI Recommendation Engine
+
+* Provide intelligent recommendations based on energy consumption patterns.
+
+### Interactive Dashboard
+
+* Modern responsive user interface.
+* Real-time prediction results.
+* Energy trend visualization.
+
+### Full-Stack Architecture
+
+* React + Vite frontend.
+* FastAPI backend.
+* Random Forest machine learning model.
+
+---
+
+## Technology Stack
+
+### Frontend
+
+* React
+* Vite
+* Axios
+* Recharts
+
+### Backend
+
+* FastAPI
+* Python
+* Uvicorn
+* Scikit-Learn
+
+### Machine Learning
+
+* Random Forest Regressor
+* Pandas
+* NumPy
+
+---
+
+## System Architecture
+
+User Input → React Frontend → FastAPI API → Random Forest Model → Prediction Results → Dashboard Visualization
+
+---
+
+## Project Structure
+
+AI-Energy-Optimization-System-V2
+
+backend/
+
+* main.py
+* models/
+* energy_model.pkl
+
+frontend/
+
+* src/
+* public/
+* package.json
+
+README.md
+
+---
+
+## Example Output
+
+* Predicted Power Usage
+* Daily Energy Consumption
+* Monthly Energy Consumption
+* Estimated Monthly Bill
+* AI Optimization Recommendation
+
+---
+
+## Future Enhancements
+
+* Smart Meter Dataset Integration
+* Real-Time Energy Monitoring
+* Advanced Forecasting Models
+* Cloud Deployment
+* Energy Analytics Dashboard
+
+---
+
+## Author
+
+Toufique Hasan
+
+M.S. Applied Computer Science
+
+Southeast Missouri State University
+
+---
+
+## License
+
+This project is developed for educational and portfolio purposes.
