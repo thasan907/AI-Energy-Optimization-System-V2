@@ -12,18 +12,11 @@ The system combines a React frontend, FastAPI backend, and a trained Random Fore
 
 ### Main Dashboard
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](frontend/docs/screenshots/Dashboard%20Home.png.png)
 
-### Prediction Results
+![Prediction](frontend/docs/screenshots/Prediction%20Result.png)
 
-![Prediction Results](screenshots/prediction.png)
-
-### AI Recommendation Panel
-
-![Recommendation](screenshots/recommendation.png)
-
----
-
+![Recommendation](frontend/docs/screenshots/Recommendation%20Panel.png)
 ## Key Features
 
 ### Machine Learning-Based Energy Forecasting
